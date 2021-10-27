@@ -1,0 +1,82 @@
+/* Dropdown Button */
+.dropdown{
+    position: relative;
+    float: right;
+}
+.dropbtn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  /* positioning */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    font-family: sans-serif;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+
+  @media (min-width:300px) and (max-width:699px) {
+    body.home{
+     background-image: url("../images/bg_img.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     }
+ }
+  @media (min-width:700px) and (max-width:1279px) {
+    body.home{
+     background-image: url("../images/bg_img.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     }
+ }
+ @media (min-width:1280px) {
+   body.home{
+    background-image: url("../images/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+}
+
+.logo{
+    height: 50px;
+    padding-left: 2rem;
+    padding-top: .5rem;
+    display: inline;
+    width: 50px;
+}
+.search{
+    height: 30px;
+    padding-top: .5rem;
+    padding-right: 1rem;
+    display: inline;
+    float: right;
+    width: 30px;
+}
