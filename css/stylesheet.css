@@ -113,7 +113,7 @@ body{
     background-image: url("../images/small_gray.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    height: 4rem;
+    height: 6rem;
     }
 
     .header_text{
@@ -158,6 +158,7 @@ body{
      background-image: url("../images/bg_img_small.jpg");
      background-repeat: no-repeat;
      background-size: cover;
+     height: 100vh;
      }
     body.categories{
     background-image: url("../images/category_header_small.jpg");
@@ -267,6 +268,7 @@ body{
     li.button{
         padding-right: .5rem;
     }
+    
  }
  @media (min-width:1120px) {
    body.home{
@@ -482,15 +484,31 @@ ul.instructions, .ingredients_list{
     color: #FB6854;
     width: 12rem;
 }
+@media (max-width: 450px){
 .addrec{
-    font-family: 'robotocondensed';
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    top: 11.3%;
+    padding-right: 1rem;
+}
+
+}
+@media (min-width: 451px){
+.addrec{
     padding-left: 2rem;
     background-color: #FB6854;
     color: white;
     width: 10rem;
     margin-left: 2rem;
-    position: absolute;
     top: 10.5%;
+}
+}
+.addrec{
+    font-family: 'robotocondensed';
+    background-color: #FB6854;
+    color: white;
+    margin-left: 2rem;
+    position: absolute;
     right: 0;
 }
 .top{
