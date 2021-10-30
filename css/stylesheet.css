@@ -345,6 +345,9 @@ body{
     }*/
 }
 /*category*/
+.cats{
+    padding-top: 2rem;
+}
 .header_text, .header_text1{
     color: white;
     font-family: 'robotocondensed';
@@ -463,3 +466,5 @@ ul.instructions, .ingredients_list{
     display: flex;
     justify-content: center;
     }
+
+    a:hover{cursor: pointer;}
