@@ -1,3 +1,22 @@
+/* fonts */
+@font-face{
+    font-family: 'robotocondensed';
+    src: url(../fonts/robotocondensed-regular-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotocondensed';
+    src: url(../fonts/robotocondensed-italic-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face{
+    font-family: 'robotocondensed';
+    src: url(../fonts/robotocondensed-bold-webfont.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
 /* nav related stuff  */
 .dropdown{
     position: relative;
@@ -71,7 +90,7 @@ body{
   body.home{
       background-color: #e7ebee;
   }
-  @media (min-width: 200px) and (max-width:599px) {
+  @media (min-width: 200px) and (max-width:650px) {
     body.home{
         background-image: url("../images/bg_img_small.jpg");
         background-repeat: no-repeat;
@@ -81,25 +100,41 @@ body{
        background-image: url("../images/category_header_small.jpg");
        background-repeat: no-repeat;
        background-size:cover;
-       height: 8rem;
+       height: 10rem;
        }
        .cat_text{
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-top:5%;
         }
-    /*.grid{
+    .grid{
         display: grid;
-        height: 100vh;
+        width: 50vh;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        justify-content: space-evenly;
-        text-align: center;
-    }*/
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
     .imgsize{
-    width: 150px;
-    }}
+    width: 170px;
+    }
+    .section_title{
+        font-family: 'robotocondensed';
+        font-size: 2.5rem;
+        padding-left: 2rem;
+        color: #FB6854;
+    }
+    ul.categories{
+        margin-top: 0;
+        padding-top: 1rem;
+    }
+    li.button{
+        padding-right: .5rem;
+    }
+}
       
-  @media (min-width: 600px) and (max-width:899px) {
+  @media (min-width: 651px) and (max-width:899px) {
     body.home{
      background-image: url("../images/bg_img_small.jpg");
      background-repeat: no-repeat;
@@ -109,25 +144,41 @@ body{
     background-image: url("../images/category_header_small.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    height: 4rem;
+    height: 2rem;
     }
     .cat_text{
-        font-size: 2.5rem;
-        padding-top: 8%;
+        font-size: 3rem;
+        padding-top: 6%;
+        margin-bottom: 0;
         }
-    /*.grid{
+    .grid{
         display: grid;
-        height: 100vh;
-        grid-template-columns: auto auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        column-gap: 3rem;
-        padding-left: 3rem;
-    }*/
+        max-width: 80vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
     .imgsize{
     width: 200px;
     }
+    .section_title{
+        font-family: 'robotocondensed';
+        font-size: 2.5rem;
+        padding-left: 2rem;
+        color: #FB6854;
+    }
+    ul.categories{
+        margin-top: 0;
+        padding-top: 3rem;
+    }
+    li.button{
+        padding-right: .5rem;
+    }
  }
-  @media (min-width:900px) and (max-width:1199px) {
+  @media (min-width:900px) and (max-width:1119px) {
     body.home{
      background-image: url("../images/bg_img_medium.jpg");
      background-repeat: no-repeat;
@@ -140,36 +191,81 @@ body{
     height: 5rem;
     }
     .cat_text{
-    font-size: 3rem;    
+    font-size: 3.5rem;    
     padding-top: 10%;
+    margin-bottom: 0;
     }
-    /*.grid{
+    .grid{
         display: grid;
         height: 100vh;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        column-gap: 3rem;
-        padding-left: 3rem;
-    }*/
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
     .imgsize{
-        width: 250px;
+        width: 200px;
         }
+    .section_title{
+        font-family: 'robotocondensed';
+        font-size: 2.5rem;
+        padding-left: 2rem;
+        color: #FB6854;
+    }
+    ul.categories{
+        margin-top: 0;
+        padding-top: 2rem;
+    }
+    li.button{
+        padding-right: .5rem;
+    }
  }
- @media (min-width:1200px) {
+ @media (min-width:1120px) {
    body.home{
     background-image: url("../images/bg_img_large.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     }
     body.categories{
-    background-image: url("../images/category_header.jpg");
+    background-image: url("../images/category_header_test.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    height: 5rem;
+    height: 4rem;
     }
     .cat_text{
-    font-size: 3rem;
-    padding-top: 14%;
+    font-size: 4rem;    
+    padding-top: 6%;
+    margin-bottom: 0;
+    }
+    .grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        column-gap: 4rem;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+    .imgsize{
+        width: 220px;
+        }
+    .section_title{
+        font-family: 'robotocondensed';
+        font-size: 2.5rem;
+        padding-left: 2rem;
+        color: #FB6854;
+    }
+    ul.categories{
+        margin-top: 0;
+        padding-top: 3.5rem;
+    }
+    li.button{
+        font-size: 1.3rem;
+        padding-right: .5rem;
     }
     /*.grid{
         display: grid;
@@ -191,17 +287,17 @@ body{
 /*category*/
 .cat_text{
     color: white;
-    font-family: sans-serif;
+    font-family: 'robotocondensed';
     padding-left: 2rem;
 }
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+
 li.button{
+    font-family: 'robotocondensed';
     display: inline;
     position: relative;
 }
-ul.categories{
-    padding-top: 2rem;
+a{
+    text-decoration: none;
+    color: #FB6854;
 }
+a:hover {color: #FFA79B;}
