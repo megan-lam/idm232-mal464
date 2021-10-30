@@ -1,9 +1,9 @@
-/* Dropdown Button */
+/* nav related stuff  */
 .dropdown{
     position: relative;
     float: right;
 }
-.dropbtn {
+.drophome {
     border: none;
     background-color: inherit;
     padding: 14px 28px;
@@ -11,6 +11,15 @@
     cursor: pointer;
     display: inline-block;
   }
+.dropbtn{
+    color: white;
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+}
   
   /* positioning */
   .dropdown {
@@ -22,12 +31,12 @@
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
+  /* inside dropdown */
   .dropdown-content a {
     font-family: sans-serif;
     color: black;
@@ -36,47 +45,163 @@
     display: block;
   }
   
-  /* Change color of dropdown links on hover */
+  /* hover states */
   .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
-  
 
-  @media (min-width:300px) and (max-width:699px) {
-    body.home{
-     background-image: url("../images/bg_img.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     }
- }
-  @media (min-width:700px) and (max-width:1279px) {
-    body.home{
-     background-image: url("../images/bg_img.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     }
- }
- @media (min-width:1280px) {
-   body.home{
-    background-image: url("../images/bg_img.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    }
-}
-
-.logo{
+.logo, .logo_w{
     height: 50px;
     padding-left: 2rem;
-    padding-top: .5rem;
+    padding-top: .3rem;
     display: inline;
     width: 50px;
 }
-.search{
+.search, .search_w{
     height: 30px;
     padding-top: .5rem;
     padding-right: 1rem;
     display: inline;
     float: right;
     width: 30px;
+}
+body{
+    margin: 0;
+}
+/* homepage code starts here*/
+  body.home{
+      background-color: #e7ebee;
+  }
+  @media (min-width: 200px) and (max-width:599px) {
+    body.home{
+        background-image: url("../images/bg_img_small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+       body.categories{
+       background-image: url("../images/category_header_small.jpg");
+       background-repeat: no-repeat;
+       background-size:cover;
+       height: 8rem;
+       }
+       .cat_text{
+        font-size: 2rem;
+        margin-top:5%;
+        }
+    /*.grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        text-align: center;
+    }*/
+    .imgsize{
+    width: 150px;
+    }}
+      
+  @media (min-width: 600px) and (max-width:899px) {
+    body.home{
+     background-image: url("../images/bg_img_small.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     }
+    body.categories{
+    background-image: url("../images/category_header_small.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 4rem;
+    }
+    .cat_text{
+        font-size: 2.5rem;
+        padding-top: 8%;
+        }
+    /*.grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        column-gap: 3rem;
+        padding-left: 3rem;
+    }*/
+    .imgsize{
+    width: 200px;
+    }
+ }
+  @media (min-width:900px) and (max-width:1199px) {
+    body.home{
+     background-image: url("../images/bg_img_medium.jpg");
+     background-repeat: no-repeat;
+     background-size:cover;
+     }
+    body.categories{
+    background-image: url("../images/category_header.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 5rem;
+    }
+    .cat_text{
+    font-size: 3rem;    
+    padding-top: 10%;
+    }
+    /*.grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        column-gap: 3rem;
+        padding-left: 3rem;
+    }*/
+    .imgsize{
+        width: 250px;
+        }
+ }
+ @media (min-width:1200px) {
+   body.home{
+    background-image: url("../images/bg_img_large.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    body.categories{
+    background-image: url("../images/category_header.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 5rem;
+    }
+    .cat_text{
+    font-size: 3rem;
+    padding-top: 14%;
+    }
+    /*.grid{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 400px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+    }
+    .grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        padding-left: 3rem;
+    }*/
+}
+/*category*/
+.cat_text{
+    color: white;
+    font-family: sans-serif;
+    padding-left: 2rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+li.button{
+    display: inline;
+    position: relative;
+}
+ul.categories{
+    padding-top: 2rem;
 }
