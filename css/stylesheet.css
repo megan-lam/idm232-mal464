@@ -109,6 +109,13 @@ body{
     background-size:cover;
     height: 4rem;
     }
+    body.edit{
+    background-image: url("../images/small_gray.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 4rem;
+    }
+
     .header_text{
         font-size: 2.5rem;
         margin-top:5%;
@@ -164,6 +171,13 @@ body{
     background-size:cover;
     height: 4rem;
     }
+    body.edit{
+    background-image: url("../images/small_gray.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 4rem;
+    }
+
     .header_text, .header_text1{
         font-size: 3rem;
         padding-top: 6%;
@@ -214,6 +228,13 @@ body{
     background-size:cover;
     height: 5rem;
     }
+    body.edit{
+    background-image: url("../images/small_gray.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 5rem;
+    }
+
     .header_text, .header_text1{
     font-size: 3.5rem;    
     padding-top: 10%;
@@ -265,6 +286,13 @@ body{
     background-size:cover;
     height: 4rem;
     }
+    body.edit{
+    background-image: url("../images/large_gray.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 4rem;
+    }
+
     .header_text, .header_text1{
     font-size: 4rem;    
     padding-top: 6%;
@@ -393,4 +421,45 @@ ul.instructions, .ingredients_list{
     .right{
         width: 60%;
     }
+    }
+    /* edit */
+    .info{
+        font-family: 'archivo';
+        font-size: 1rem;
+        color: rgb(173, 173, 173);
+        line-height: 1.5rem;
+    }
+    .box1, .box2{
+        background-color: whitesmoke;
+        border-radius: 7px;
+    }
+    .box1{
+        width: 14rem;
+        height: 1.5rem;
+    }
+    .box2{
+        height: 5rem;
+    }
+    .addpic{
+        font-family: 'robotocondensed';
+        padding-left: 2rem;
+        background-color: #FB6854;
+        color: white;
+        width: 10rem;
+        border-radius: 7px;
+        margin-left: 2rem;
+    }
+    .publish{
+        font-family: 'robotocondensed';
+        padding-left: 2rem;
+        background-color: #FB6854;
+        color: white;
+        width: 7.5rem;
+        border-radius: 7px;
+        margin-left: 2rem;
+    }
+    .savepost{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
     }
