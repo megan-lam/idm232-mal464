@@ -117,7 +117,7 @@ body{
     height: 6rem;
     }
 
-    .header_text{
+    .header_text, .title_container{
         font-size: 2.5rem;
         margin-top:5%;
         }
@@ -180,7 +180,7 @@ body{
     height: 4rem;
     }
 
-    .header_text, .header_text1{
+    .header_text, .header_text1, .title_container{
         font-size: 3rem;
         padding-top: 6%;
         margin-bottom: 0;
@@ -237,7 +237,7 @@ body{
     height: 5rem;
     }
 
-    .header_text, .header_text1{
+    .header_text, .header_text1, .title_container{
     font-size: 3.5rem;    
     padding-top: 10%;
     margin-bottom: 0;
@@ -296,7 +296,7 @@ body{
     height: 4rem;
     }
 
-    .header_text, .header_text1{
+    .header_text, .header_text1, .title_container{
     font-size: 4rem;    
     padding-top: 6%;
     margin-bottom: 0;
@@ -352,7 +352,7 @@ body{
     padding-top: 2rem;
 }
 .header_text, .header_text1{
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'robotocondensed';
     padding-left: 2rem;
 }
@@ -446,12 +446,12 @@ ul.instructions, .ingredients_list{
     .box2{
         height: 5rem;
     }
-    .addpic{
+    .add_pic{
         font-family: 'robotocondensed';
         padding-left: 2rem;
         background-color: #FB6854;
         color: white;
-        width: 10rem;
+        width: 14rem;
         border-radius: 7px;
         margin-left: 2rem;
     }
@@ -590,6 +590,9 @@ body.search{
     border-radius: 4px;
 }
 .btn{
+    font-family: 'robotocondensed';
+    font-weight: bold;
+    text-transform: uppercase;
     -webkit-appearance: button;
     display: inline-block;
     font-weight: 400;
@@ -603,14 +606,58 @@ body.search{
     user-select: none;
     border: 1px solid transparent;
     border-radius: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
 }
 .btn-primary{
     color: white;
     background-color: #FB6854;
     border-color: #FB6854 ;
 }
+.btn:hover{
+    color: #FFA79B;
+}
+
 .sbutton:hover{
     cursor: pointer;
     background-color: #FFA79B;
 }
     a:hover{cursor: pointer;}
+
+/* styling php pages */
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.view_content{
+    padding-left: 5rem;
+}
+.recipe_title{
+    font-family: 'robotocondensed';
+    font-size: 2.5rem;
+    color: #FB6854;
+}
+.copy{
+    font-family: 'robotocondensed';
+    font-size: 1rem;
+}
+.copy_container{
+    padding-bottom: 1rem;
+}
+
+/* add recipe pg */
+.title_container{
+    padding-left: 2rem;
+}
+.title_text{
+    font-family: 'robotocondensed';
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+.center_btn{
+text-align: center;
+}

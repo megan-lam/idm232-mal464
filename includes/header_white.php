@@ -1,11 +1,20 @@
+<?php
+require_once __DIR__ . '../../config.php';
+require_once __DIR__ . '/database.php';
+require_once __DIR__ . '/helper.php';
+?>
+
 <div>
-        <a href="index.html">
+        <a href="/index.php">
             <img src="images/logo_white.svg" alt="Logo" class= "logo_w"/></a>
-        <a href="search.html">  
+        <a href="/search.php">  
             <img src="images/w_search.svg" alt="search" class= "search_w"></a>     
-        <a href="login.html">  
+        
+        <!-- take out login
+            <a href="/login.php">  
             <img src="images/acc_white.svg" alt="Login" class= "search_w"></a>     
-      
+        -->
+
         <div class="dropdown">
           <button class="dropbtn">RECIPES</button>
           <div class="dropdown-content">
