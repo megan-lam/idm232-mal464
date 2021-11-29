@@ -11,7 +11,7 @@
     <title>Search</title>
 </head>
 <body class="view">
-    <?php include 'includes/header_black.php';?> 
+    <?php include 'global/header_black.php';?> 
           <div class="search_center">
           <div class="searchbar">
           <input class="searchtext" type="search" id="site-search" name="q"
