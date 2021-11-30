@@ -1,6 +1,6 @@
 <?php
 $page_title = 'View';
-include_once '../../global/admin_header_white.php'; ?>
+include_once '../../global/admin_header_white2.php'; ?>
 
 <div class="top">
 
@@ -24,26 +24,41 @@ if (isset($_GET['id'])) {
     redirectTo('/admin/users');
 }
 ?>
-<div class="view_content">
-    <h1 class="recipe_title"><?php echo $user['recipe_title']; ?>
+<body class="recipes">
+    <h1 class="header_text1"><?php echo $user['recipe_title']; ?>
     </h1>
-    <div class="copy_container">
-    <p class="copy">Category: <?php echo $user['category']; ?>
-    </p>
-    <p class="copy">Ingredients: <?php echo $user['ingredients']; ?>
-    </p>
-    <p class="copy">Steps: <?php echo $user['steps']; ?>
-    </p>
-    <p class="copy">Date Created: <?php echo $user['date_posted']; ?>
-    </p>
-    <p class="copy">Last Updated: <?php echo $user['date_updated']; ?>
-    </p>
+    <HR WIDTH="100%" COLOR="FB6854" SIZE="4">
+
+<div class="mobile_center">
+<div class="center_recipe">
+
+    <div class="column left">
+    <h2 class="ingredients">Ingredients </h2> 
+    <ul class="ingredients_list">
+    <li class="recipepg"><?php echo $user['ingredients']; ?>
+    </li></ul>
     </div>
+
+    <div class="column right">
+    <h2 class="steps">Steps</h2> 
+    <ul class="instructions">
+    <li class="recipepg"><?php echo $user['steps']; ?>
+    </li></ul>
+    </div>
+   
+    </div> 
+
+    <p class="date">Date Created: <?php echo $user['date_posted']; ?>
+    </p>
+    <p class="date">Last Updated: <?php echo $user['date_updated']; ?>
+    </p> 
+   <div class="controls">
     <p><a class="btn btn-primary"
-            href="/editrecipe.php?id=<?php echo $user['id']; ?>">Edit</a>
+            href="edit.php?id=<?php echo $user['id']; ?>">Edit</a>
         <a class="btn btn-primary"
             href="delete.php?id=<?php echo $user['id']; ?>">Delete</a>
     </p>
+    </div>
 </div>
 
 </div>

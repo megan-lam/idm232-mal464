@@ -5,29 +5,26 @@ include_once '../../global/admin_header_black.php'; ?>
 <?php   // Form has been submitted
 if (isset($_POST['submit'])) {
     //  Parse Data
-    $recipe_title = mysqli_real_escape_string($db_connection, $_POST['$recipe_title']);
+    $recipe_title = mysqli_real_escape_string($db_connection, $_POST['recipe_title']);
     $ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
     $steps = mysqli_real_escape_string($db_connection, $_POST['steps']);
-
+    
 
     // Build Query
-    $query = 'INSERT INTO Recipes (recipe_title, ingredients,  steps)';
-    $query .= "VALUES ('{$recipe_title}', '{$ingredients}', '{$steps}')";
+    $sql = "INSERT INTO `Recipes` (`recipe_title`, `ingredients`, `steps`)
+    VALUES ('$recipe_title', '$ingredients', '$steps');";
 
     // Execute Query
-    $db_results = mysqli_query($db_connection, $query);
+    $db_results = mysqli_query($db_connection, $sql);
     if ($db_results) {
         // Success
-        redirectTo('viewall.php?success=Recipe created');
+        redirectTo('viewall.php');
     } else {
         // Error
+        // echo 'Error';
         redirectTo('viewall.php?error=' . mysqli_error($db_connection));
     }
 }
-//echo '<pre>';
-//    var_dump($db_connection);
-//echo'</pre>';
-//die;
 ?>
 <body class="edit">
 <div class="title_container">

@@ -465,10 +465,14 @@ ul.instructions, .ingredients_list{
         border-radius: 7px;
         margin-left: 2rem;
     }*/
-    .savepost{
-    padding-top: 5rem;
+    .controls{
+    padding-top: 3rem;
     display: flex;
     justify-content: center;
+    }
+    .date{
+        font-family: 'archivo';
+        padding-left: 6rem;
     }
 
     /* view */
