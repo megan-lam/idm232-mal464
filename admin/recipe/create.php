@@ -1,36 +1,35 @@
 <?php
-$page_title = 'Create User';
-include '../../global/header_black.php';?>
+$page_title = 'Create Recipe';
+include_once '../../global/admin_header_black.php'; ?>
       
 <?php   // Form has been submitted
 if (isset($_POST['submit'])) {
     //  Parse Data
     $recipe_title = mysqli_real_escape_string($db_connection, $_POST['$recipe_title']);
-    $category = mysqli_real_escape_string($db_connection, $_POST['category']);
     $ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
     $steps = mysqli_real_escape_string($db_connection, $_POST['steps']);
-    $current_date = getFormattedDateTime();
+
 
     // Build Query
-    $query = 'INSERT INTO users (recipe_title, category, ingredients,  date_posted, date_updated)';
-    $query .= "VALUES ('{$recipe_title}', '{$category}', '{$ingredients}', '{$current_date}', '{$current_date}')";
+    $query = 'INSERT INTO Recipes (recipe_title, ingredients,  steps)';
+    $query .= "VALUES ('{$recipe_title}', '{$ingredients}', '{$steps}')";
 
     // Execute Query
     $db_results = mysqli_query($db_connection, $query);
-    if ($db_results && $db_results->num_rows > 0) {
+    if ($db_results) {
         // Success
-        redirectTo('/viewall.php');
+        redirectTo('viewall.php?success=Recipe created');
     } else {
         // Error
-        redirectTo('/viewall.php?error=' . mysqli_error($db_connection));
+        redirectTo('viewall.php?error=' . mysqli_error($db_connection));
     }
 }
-//<echo '<pre>';
+//echo '<pre>';
 //    var_dump($db_connection);
 //echo'</pre>';
 //die;
 ?>
-
+<body class="edit">
 <div class="title_container">
 <form action="" method ="POST">
   <input class="title_text" id="recipe_title" type="text" name="recipe_title" value="" placeholder="+ RECIPE TITLE" required>

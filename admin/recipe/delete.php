@@ -1,26 +1,19 @@
-<?php
-$page_title = 'Create User';
-include '../../global/header_white2.php';?>
 
 <?php
+$page_title = 'Delete Recipe';
+include_once '../../global/admin_header_white.php';
 
-if (isset($_GET['id'])) {
-    $user_id = $_GET['id'];
-    // Build Query
-    $query .= 'DELETE ';
-    $query .= 'FROM users ';
-    $query .= 'WHERE id=' . $user_id;
-    // Sanity check to make sure we're only deleting a single record.
-    $query . -'LIMIT 1';
+if(isset($_GET['id'])){
+    $recipe_id = $_GET['id'];
+    $sql = mysqli_query($db_connection, "DELETE FROM recipes WHERE id=$recipe_id") or die($sql->error());
 
-    $db_results = mysqli_query($db_connection, $query);
+    $db_results = mysqli_query($db_connection, $sql);
     if ($db_results) {
-        redirectTo('viewall.php?success=User was deleted');
+        // Success
+        redirectTo('viewall.php?success=Recipe Deleted');
     } else {
-        redirectTo('view.php?id=' . $_GET['id'] . '&error=' . mysqli_error($db_connection));
+        // Error
+        redirectTo('viewall.php?error=' . mysqli_error($db_connection));
     }
-} else {
-    // Redirect user if no ID is passed in URL
-    redirectTo('/admin/users');
 }
 ?>

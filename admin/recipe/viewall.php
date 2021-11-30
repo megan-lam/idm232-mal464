@@ -1,27 +1,26 @@
 <?php
-$page_title = 'Create User';
-include_once '../../global/header_black2.php'; ?>
+$page_title = 'View All';
+include_once '../../global/admin_header_white.php'; ?>
 
 <div class="top">
 <h2 class="view_title">VIEW ALL</h2>
-<a href="addrecipe.php">
+<a href="create.php">
 <h2 class="addrec">ADD A RECIPE</h2></div></a>
 <div class="container">
 <?php
-    // Build Query
-$query = 'SELECT * ';
-$query .= 'FROM Recipes';
-$db_results = mysqli_query($db_connection, $query);
-?>
-    <?php
-    // Check if the results returned anything
-
-    if ($db_results && $db_results->num_rows > 0) {
-        include $_SERVER['DOCUMENT_ROOT'] . '/components/list-recipes.php';
-    } else {
-        echo '<p>There are currently no recipes in the database</p>';
-    }
-    ?>
+ // Build Query
+ $query = 'SELECT * ';
+ $query .= 'FROM recipes';
+ $db_results = mysqli_query($db_connection, $query);
+ ?>
+     <?php
+     // Check if the results returned anything
+     if ($db_results && $db_results->num_rows > 0) {
+         include '../../components/list-recipes.php';
+     } else {
+         echo '<p>There are no recipes yet, create one!</p>';
+     }
+     ?>
 </div>
 </div>
 </body>

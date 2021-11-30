@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Create User';
-include '../../global/header_white2.php';?>
+$page_title = 'View';
+include_once '../../global/admin_header_white.php'; ?>
 
 <div class="top">
 
@@ -9,9 +9,7 @@ if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
 
     // Build Query
-    $query .= 'SELECT * ';
-    $query .= 'FROM Recipes ';
-    $query .= 'WHERE id=' . $user_id;
+    $query = "SELECT * FROM recipes WHERE id=" . $user_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results && $db_results->num_rows > 0) {
@@ -44,7 +42,7 @@ if (isset($_GET['id'])) {
     <p><a class="btn btn-primary"
             href="/editrecipe.php?id=<?php echo $user['id']; ?>">Edit</a>
         <a class="btn btn-primary"
-            href="/delete.php?id=<?php echo $user['id']; ?>">Delete</a>
+            href="delete.php?id=<?php echo $user['id']; ?>">Delete</a>
     </p>
 </div>
 

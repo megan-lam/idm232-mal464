@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Create User';
-include '../../global/header_white2.php';?>
+$page_title = 'Edit';
+include_once '../../global/admin_header_black.php'; ?>
 
 <div class="top">
 <h2 class="view_title">EDIT</h2>
