@@ -14,6 +14,7 @@ if (isset($_POST['update'])) {
     }
     //  Parse Data
     $recipe_title = mysqli_real_escape_string($db_connection, $_POST['recipe_title']);
+    $category = mysqli_real_escape_string($db_connection, $_POST['category']);
     $ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
     $steps = mysqli_real_escape_string($db_connection, $_POST['steps']);
     $current_date = getFormattedDateTime();
@@ -22,6 +23,7 @@ if (isset($_POST['update'])) {
     $query = 'UPDATE recipes ';
     $query .= 'SET ';
     $query .= "recipe_title = '{$recipe_title}', ";
+    $query .= "category = '{$category}', ";
     $query .= "ingredients = '{$ingredients}', ";
     $query .= "steps = '{$steps}', ";
     $query .= "date_updated = '{$current_date}' ";
@@ -56,23 +58,27 @@ if (isset($_POST['update'])) {
 }
 ?>
 
-      <div class="container">
-      <form action="" method ="POST">
+    <div class="container">
+    <form action="" method ="POST">
 
-         <input type="text" 
-         value="<?php echo $user['recipe_title'];?>""
-         name="recipe_title" >
+    <input type="text" 
+    value="<?php echo $user['recipe_title'];?>""
+    name="recipe_title" >
 
-         <input type="text" 
-         value="<?php echo $user['ingredients'];?>"
-         name= "ingredients">
+    <input type="text" 
+    value="<?php echo $user['category'];?>"
+    name= "category">
 
-         <input type="text"
-         value="<?php echo $user['steps'];?>"
-         name="steps">
+    <input type="text" 
+    value="<?php echo $user['ingredients'];?>"
+    name= "ingredients">
 
-         <input class="btn btn-primary" name="update" type="submit" value="Update">
-      </form>
+    <input type="text"
+    value="<?php echo $user['steps'];?>"
+    name="steps">
+
+    <input class="btn btn-primary" name="update" type="submit" value="Update">
+    </form>
 
   </form>
 </div>
