@@ -8,7 +8,7 @@
     <title>Categories</title>
 </head>
 <body class="categories">
-    <?php include 'includes/header_white.php';?>
+<?php require_once __DIR__ . '/global/header_white.php';?>
         <h1 class="header_text">I WANT TO SEE...</h1>
         <div class="cats">
         <ul class= "categories">

@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Create Recipe';
-include_once '../../global/admin_header_black.php'; ?>
+require_once __DIR__ . '../../../global/admin_header_black.php';?>
+
       
 <?php   // Form has been submitted
 if (isset($_POST['submit'])) {
@@ -20,37 +21,50 @@ if (isset($_POST['submit'])) {
     $db_results = mysqli_query($db_connection, $sql);
     if ($db_results) {
         // Success
-        redirectTo('viewall.php');
+        redirectTo('admin/recipe/viewall.php');
     } else {
         // Error
         // echo 'Error';
-        redirectTo('viewall.php?error=' . mysqli_error($db_connection));
+        redirectTo('admin/recipe/viewall.php?error=' . mysqli_error($db_connection));
     }
+}
+
+if (isset($_POST['submit'])) {
+    //echo '<pre>';
+    //var_dump($_FILES['image']);
+    //echo '</pre>';
+    die;
+    // Parse Data
+    $files_array = explode('.', $_FILES['image']['name']);
+    $file_title = slugify($files_array[0]);
+    $extension = $files_array[1];
+    $final_file_name = $file_title . '.' . $extension;
+    $temp_name = $_FILES['image']['tmp_name'];
 }
 ?>
 <body class="edit">
 <div class="title_container">
-<form action="" method ="POST">
+<form action="" method ="POST" enctype="multipart/form-data">
   <input class="title_text" id="recipe_title" type="text" name="recipe_title" value="" placeholder="+ RECIPE TITLE" required>
 </div>
             <HR WIDTH="100%" COLOR="FB6854" SIZE="4">
 
-        <input class="add_pic btn" type="file" id="myFile" name="filename">
-     
+        <input class="add_pic btn" type="file" value="" name="image">
+        <div class="cat_layout">
+
         <div class="mobile_center">
-            <div class="cat_layout">
-            <input class="info" id="category" type="text" name="category" value="" placeholder="+ Category" required>
+            <input class="cat_text" id="category" type="text" name="category" value="" placeholder="+ Category" required>
             </div>
         <div class="center_recipe">
             
         <div class="column left">
         <h2 class="ingredients">INGREDIENTS</h2>
-            <input class="info" id="ingredient" type="text" name="ingredients" value="" placeholder="+ Add Ingredient" required>
+            <textarea class="textarea" id="ingredient" placeholder="+ Add Ingredient" required></textarea>
         </div>
 
         <div class="column right">
         <h2 class="steps">STEPS</h2>
-        <input class="info" id="step" type="text" name="steps" value="" placeholder="+ Type your step here" required>
+        <textarea class="textarea" id="step" placeholder="+ Type your step here" required></textarea>
             </div>
         </div>
 
@@ -62,5 +76,4 @@ if (isset($_POST['submit'])) {
     </div>
   </form>
 </div>
-</body>
-</html>
+<?php require_once __DIR__ . '../../../global/footer.php';?>

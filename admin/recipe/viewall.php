@@ -1,6 +1,6 @@
 <?php
 $page_title = 'View All';
-include_once '../../global/admin_header_white.php'; ?>
+require_once __DIR__ . '../../../global/admin_header_white.php'; ?>
 
 <div class="top">
 <h2 class="view_title">VIEW ALL</h2>
@@ -10,7 +10,7 @@ include_once '../../global/admin_header_white.php'; ?>
 <?php
  // Build Query
  $query = 'SELECT * ';
- $query .= 'FROM recipes';
+ $query .= 'FROM Recipes';
  $db_results = mysqli_query($db_connection, $query);
  ?>
      <?php

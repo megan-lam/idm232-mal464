@@ -1,9 +1,9 @@
 <?php
 //Required files for the app 
+require_once __DIR__ . '../../config.php';
+require_once __DIR__ . '../../includes/database.php';
+require_once __DIR__ . '../../includes/helper.php';
 
-include 'config.php';
-include 'includes/database.php';
-include 'includes/helper.php';
 
 if (isset($page_title)) {
     $page_title = $page_title . '';
@@ -36,7 +36,7 @@ if (isset($page_title)) {
     <div class="dropdown">
         <button class="drophome">RECIPES</button>
         <div class="dropdown-content">
-          <a href="categories.html" class="droptext">Categories</a>
-          <a href="viewall.html" class="droptext">View All</a>
+          <a href="../../categories.php" class="droptext">Categories</a>
+          <a href="/idm232-mal464/admin/recipe/viewall.php" class="droptext">View All</a>
         </div>
       </div>

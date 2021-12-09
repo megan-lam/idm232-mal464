@@ -397,7 +397,7 @@ ul.instructions, .ingredients_list{
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         max-width: 75%;
-        display: flex;
+        display: block;
         justify-content: center;
 
     }
@@ -406,6 +406,13 @@ ul.instructions, .ingredients_list{
     }
     .right{
         padding-bottom: 6rem;
+    }
+    .cat_layout{
+        padding-left: .5rem;
+        padding-top: 3rem;
+    }
+    .textarea{
+        max-width: 10rem;
     }
 }
 
@@ -427,17 +434,17 @@ ul.instructions, .ingredients_list{
     .right{
         width: 60%;
     }
+    .cat_layout{
+        padding-left: 2rem;
+        padding-top: 5rem;
+    }
     }
     /* edit */
-    .info{
+    .textarea{
         font-family: 'archivo';
         font-size: 1rem;
         color: rgb(173, 173, 173);
         line-height: 1.5rem;
-    }
-    .cat_layout{
-        padding-left: 2rem;
-        padding-top: 5rem;
     }
     .box1, .box2{
         background-color: whitesmoke;
@@ -666,6 +673,10 @@ body.search{
     padding-left: 2rem;
     font-size: 2rem;
 }
-.center_btn{
+div.center_btn{
 text-align: center;
+padding-bottom: 3rem;
+}
+.pls{
+    padding-bottom: 3rem;
 }

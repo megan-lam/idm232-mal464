@@ -1,7 +1,7 @@
 
 <?php
 $page_title = 'Delete Recipe';
-include_once '../../global/admin_header_white.php';
+require_once __DIR__ . '../../../global/admin_header_white.php';
 
 if(isset($_GET['id'])){
     $recipe_id = $_GET['id'];
@@ -10,10 +10,10 @@ if(isset($_GET['id'])){
     $db_results = mysqli_query($db_connection, $sql);
     if ($db_results) {
         // Success
-        redirectTo('viewall.php?success=Recipe Deleted');
+        redirectTo('admin/recipe/viewall.php?success=Recipe Deleted');
     } else {
         // Error
-        redirectTo('viewall.php?error=' . mysqli_error($db_connection));
+        redirectTo('admin/recipe/viewall.php?error=' . mysqli_error($db_connection));
     }
 }
 ?>

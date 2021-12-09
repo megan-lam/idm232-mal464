@@ -1,6 +1,6 @@
 <?php
 $page_title = 'View';
-include_once '../../global/admin_header_white2.php'; ?>
+require_once __DIR__ . '../../../global/admin_header_white2.php'; ?>
 
 <div class="top">
 
@@ -53,6 +53,8 @@ if (isset($_GET['id'])) {
     <p class="date">Last Updated: <?php echo $user['date_updated']; ?>
     </p> 
    <div class="controls">
+   <div class="center_btn">
+
     <p><a class="btn btn-primary"
             href="edit.php?id=<?php echo $user['id']; ?>">Edit</a>
         <a class="btn btn-primary"

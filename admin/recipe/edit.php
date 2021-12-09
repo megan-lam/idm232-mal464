@@ -1,17 +1,15 @@
 <?php
 $page_title = 'Edit';
-include_once '../../global/admin_header_white.php'; ?>
+require_once __DIR__ . '../../../global/admin_header_white.php'; ?>
 
 <div class="top">
 <h2 class="view_title">EDIT</h2>
 
 <?php
 if (isset($_POST['update'])) {
-  $recipe_id = $_POST['recipe_id'];
+$user_id =$_POST['user_id'];
     // Make sure GET ID == post ID
-    if ($_GET['id'] != $recipe_id) {
-        redirectTo('/admin/edit.php?id=' . $_GET['id'] . '&error=User ID does not match current user.');
-    }
+    
     //  Parse Data
     $recipe_title = mysqli_real_escape_string($db_connection, $_POST['recipe_title']);
     $category = mysqli_real_escape_string($db_connection, $_POST['category']);
@@ -35,10 +33,10 @@ if (isset($_POST['update'])) {
 
     if ($db_results) {
         // Success
-        redirectTo('viewall.php?success=Recipe Updated');
+        redirectTo('admin/recipe/viewall.php?success=Recipe Updated');
     } else {
         // Error
-        redirectTo('viewall.php?id=&error=' . mysqli_error($db_connection));
+        redirectTo('admin/recipe/viewall.php?id=&error=' . mysqli_error($db_connection));
     }
 } elseif (isset($_GET['id'])) {
     $user_id = $_GET['id'];
@@ -78,6 +76,11 @@ if (isset($_POST['update'])) {
     name="steps">
 
     <input class="btn btn-primary" name="update" type="submit" value="Update">
+
+    <input type="hidden"
+      value="<?php echo $user['id']; ?>"
+      name="user_id">
+
     </form>
 
   </form>
