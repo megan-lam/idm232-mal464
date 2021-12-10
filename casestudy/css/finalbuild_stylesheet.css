@@ -1,0 +1,124 @@
+/* fonts */
+@font-face{
+    font-family: 'robotocondensed';
+    src: url(../fonts/robotocondensed-regular-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotocondensed';
+    src: url(../fonts/robotocondensed-italic-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face{
+    font-family: 'robotocondensed';
+    src: url(../fonts/robotocondensed-bold-webfont.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+    margin:0;
+    padding: 0;
+}
+.brand{
+    padding-top: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.the{
+    color: black;
+    font-family: 'robotocondensed';
+    font-size: 2rem;
+    font-weight: normal;
+    text-decoration: none;
+    padding-left: .5rem;
+}
+.ordinary{
+    color: black;
+    font-family: 'robotocondensed';
+    font-size: 7rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 500px){
+    .the{
+       font-size: 1.7rem;
+    }
+    .ordinary{
+        font-size: 4rem;
+    }}
+.bar{
+    background-color: #FB6854;
+    height: 1.8rem;
+    width: -50%;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    left: 0;
+}
+.alphatext{
+    font-family: 'robotocondensed';
+    padding-left: 4.5rem;
+    padding-top: .2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+h2.title{
+    font-family: 'robotocondensed';
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+}
+.title{
+    margin: 0;
+}
+
+.title2{
+    text-transform: uppercase;
+    font-family: 'robotocondensed';
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #3B6DED;
+    padding: 0 2rem;
+
+}
+.content{
+    padding-top: 2rem;
+}
+
+li{
+    font-family: 'robotocondensed';    
+    font-size: 1rem;
+    line-height: 1.7rem;
+    list-style: none;
+    padding: 0 2rem 1.2rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.img{
+    text-align: center;
+    padding:0 4rem;
+}
+a.link{
+    font-family: 'robotocondensed';
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #FB6854;
+    padding: 0 2rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.link:hover{
+    color: #FFA79B;
+}
