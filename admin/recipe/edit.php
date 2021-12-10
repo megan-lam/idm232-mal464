@@ -18,7 +18,7 @@ $user_id =$_POST['user_id'];
     $current_date = getFormattedDateTime();
 
     // Build Query
-    $query = 'UPDATE recipes ';
+    $query = 'UPDATE Recipes ';
     $query .= 'SET ';
     $query .= "recipe_title = '{$recipe_title}', ";
     $query .= "category = '{$category}', ";
@@ -26,6 +26,7 @@ $user_id =$_POST['user_id'];
     $query .= "steps = '{$steps}', ";
     $query .= "date_updated = '{$current_date}' ";
     $query .= "WHERE id = {$user_id}";
+
 
 
     // Execute Query
@@ -41,7 +42,7 @@ $user_id =$_POST['user_id'];
 } elseif (isset($_GET['id'])) {
     $user_id = $_GET['id'];
     // Build Query
-    $query = "SELECT * FROM recipes WHERE id=" . $user_id;
+    $query = "SELECT * FROM Recipes WHERE id=" . $user_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results) {
@@ -54,34 +55,36 @@ $user_id =$_POST['user_id'];
     // Redirect user if no ID is passed in URL
     redirectTo('viewall.php');
 }
+
+
+
 ?>
 
     <div class="container">
-    <form action="" method ="POST">
+        <form action="" method ="POST">
 
-    <input type="text" 
-    value="<?php echo $user['recipe_title'];?>""
-    name="recipe_title" >
+            <input type="text" 
+            value="<?php echo $user['recipe_title'];?>""
+            name="recipe_title" >
 
-    <input type="text" 
-    value="<?php echo $user['category'];?>"
-    name= "category">
+            <input type="text" 
+            value="<?php echo $user['category'];?>"
+            name= "category">
 
-    <input type="text" 
-    value="<?php echo $user['ingredients'];?>"
-    name= "ingredients">
+            <textarea class="textarea" name="ingredients">
+            <?php echo $user['ingredients'];?>
+            </textarea>
 
-    <input type="text"
-    value="<?php echo $user['steps'];?>"
-    name="steps">
+            <textarea class="textarea" name="steps">
+            <?php echo $user['steps'];?>
+            </textarea>
 
-    <input class="btn btn-primary" name="update" type="submit" value="Update">
+            <input class="btn btn-primary" id="updatebtn" name="update" type="submit" value="Update">
 
-    <input type="hidden"
-      value="<?php echo $user['id']; ?>"
-      name="user_id">
+            <input type="hidden"
+            value="<?php echo $user['id']; ?>"
+            name="user_id">
 
-    </form>
-
-  </form>
-</div>
+        </form>
+    </div>
+<?php require_once __DIR__ . '../../../global/footer.php';?>

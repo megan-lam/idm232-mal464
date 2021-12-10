@@ -15,6 +15,7 @@ if (isset($page_title)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://cdn.tiny.cloud/1/fgyx2kmkw2s33smbz0cvejozup0j53sy7rwd2ko3q3x3wws8/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalizer" href="../../css/normalize.css">

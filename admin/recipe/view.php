@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
 
     // Build Query
-    $query = "SELECT * FROM recipes WHERE id=" . $user_id;
+    $query = "SELECT * FROM Recipes WHERE id=" . $user_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results && $db_results->num_rows > 0) {

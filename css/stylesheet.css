@@ -110,7 +110,7 @@ body{
     background-size:cover;
     height: 4rem;
     }
-    body.edit{
+    div.edit{
     background-image: url("../images/small_gray.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -173,7 +173,7 @@ body{
     background-size:cover;
     height: 4rem;
     }
-    body.edit{
+    div.edit{
     background-image: url("../images/small_gray.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -230,7 +230,7 @@ body{
     background-size:cover;
     height: 5rem;
     }
-    body.edit{
+    div.edit{
     background-image: url("../images/small_gray.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -289,7 +289,7 @@ body{
     background-size:cover;
     height: 4rem;
     }
-    body.edit{
+    div.edit{
     background-image: url("../images/large_gray.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -445,6 +445,7 @@ ul.instructions, .ingredients_list{
         font-size: 1rem;
         color: rgb(173, 173, 173);
         line-height: 1.5rem;
+        padding-bottom: rem;
     }
     .box1, .box2{
         background-color: whitesmoke;
@@ -676,7 +677,4 @@ body.search{
 div.center_btn{
 text-align: center;
 padding-bottom: 3rem;
-}
-.pls{
-    padding-bottom: 3rem;
 }

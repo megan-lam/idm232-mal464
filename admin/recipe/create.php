@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     //echo '<pre>';
     //var_dump($_FILES['image']);
     //echo '</pre>';
-    die;
+    //die;
     // Parse Data
     $files_array = explode('.', $_FILES['image']['name']);
     $file_title = slugify($files_array[0]);
@@ -42,38 +42,41 @@ if (isset($_POST['submit'])) {
     $temp_name = $_FILES['image']['tmp_name'];
 }
 ?>
-<body class="edit">
-<div class="title_container">
-<form action="" method ="POST" enctype="multipart/form-data">
-  <input class="title_text" id="recipe_title" type="text" name="recipe_title" value="" placeholder="+ RECIPE TITLE" required>
-</div>
-            <HR WIDTH="100%" COLOR="FB6854" SIZE="4">
+<div class="edit">
+        <form action="" method ="POST" enctype="multipart/form-data">
+    <div class="title_container">
+
+            <input class="title_text" id="recipe_title" type="text" name="recipe_title" value="" placeholder="+ RECIPE TITLE" required>
+    </div>
+            <hr width="100%" color="FB6854" size="4">
 
         <input class="add_pic btn" type="file" value="" name="image">
-        <div class="cat_layout">
 
-        <div class="mobile_center">
+        <div class="cat_layout">
+            <div class="mobile_center">
             <input class="cat_text" id="category" type="text" name="category" value="" placeholder="+ Category" required>
             </div>
-        <div class="center_recipe">
-            
-        <div class="column left">
-        <h2 class="ingredients">INGREDIENTS</h2>
-            <textarea class="textarea" id="ingredient" placeholder="+ Add Ingredient" required></textarea>
-        </div>
 
-        <div class="column right">
-        <h2 class="steps">STEPS</h2>
-        <textarea class="textarea" id="step" placeholder="+ Type your step here" required></textarea>
+            <div class="center_recipe">
+            
+                <div class="column left">
+                <h2 class="ingredients">INGREDIENTS</h2>
+                <textarea class="textarea" id="ingredient" name="ingredients" placeholder="+ Add Ingredient"></textarea>
+                </div>
+
+                <div class="column right">
+                <h2 class="steps">STEPS</h2>
+                <textarea class="textarea" id="step" name="steps" placeholder="+ Type your step here"></textarea>
+                </div>
             </div>
         </div>
 
         
     <br>
     <br>
-    <div class="center_btn">
-    <input class="btn btn-primary" name="submit" type="submit">
-    </div>
+        <div class="center_btn">
+        <input class="btn btn-primary" name="submit" type="submit">
+        </div>
   </form>
 </div>
 <?php require_once __DIR__ . '../../../global/footer.php';?>
