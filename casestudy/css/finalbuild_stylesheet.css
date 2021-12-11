@@ -49,7 +49,15 @@ body{
     }
     .ordinary{
         font-size: 4rem;
-    }}
+    }
+    img.home{
+        width: 300px       
+    }
+    img.image{
+        width: 15rem;
+        padding: 0 2rem;
+    }
+}
 .bar{
     background-color: #FB6854;
     height: 1.8rem;
@@ -76,6 +84,7 @@ h2.title{
 }
 .title{
     margin: 0;
+    color: #FB6854;
 }
 
 .title2{
@@ -83,12 +92,13 @@ h2.title{
     font-family: 'robotocondensed';
     font-weight: bold;
     font-size: 1.2rem;
-    color: #3B6DED;
+    color: #FB6854;
     padding: 0 2rem;
 
 }
 .content{
     padding-top: 2rem;
+    max-width: 40rem;
 }
 
 li{
@@ -107,8 +117,7 @@ li{
 }
 
 .img{
-    text-align: center;
-    padding:0 4rem;
+text-align: center;
 }
 a.link{
     font-family: 'robotocondensed';
@@ -121,4 +130,11 @@ a.link{
 }
 a.link:hover{
     color: #FFA79B;
+}
+img.home{
+    width: 30rem;
+}
+.image{
+    width: 30rem;
+    padding: 2rem 2rem;
 }
