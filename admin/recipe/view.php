@@ -17,11 +17,11 @@ if (isset($_GET['id'])) {
         $user = mysqli_fetch_assoc($db_results);
     } else {
         // Redirect user if ID does not have a match in the DB
-        redirectTo('/admin/users?error=' . mysqli_error($db_connection));
+        redirectTo('/admin/viewall?error=' . mysqli_error($db_connection));
     }
 } else {
     // Redirect user if no ID is passed in URL
-    redirectTo('/admin/users');
+    redirectTo('/admin/viewall');
 }
 ?>
 <body class="recipes">

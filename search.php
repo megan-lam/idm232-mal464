@@ -1,4 +1,35 @@
     <?php include 'global/header_black.php';
+
+// Build Query
+
+
+// If Keyword param exist, update query to show search results instead of everything
+
+$keyword = $_GET['keyword'];
+if ($keyword) {
+      global $db_connection;
+      // Learn more here https://www.w3schools.com/mysql/mysql_like.asp
+      $query = 'SELECT * ';
+      $query .= 'FROM Recipes ';
+      $query .= ' WHERE ';
+      $query .= "`recipe_title` LIKE '%" . $keyword . "%'";
+      $query .= "OR `category` LIKE '%" . $keyword . "%' ";
+      $query .= "OR `ingredients` LIKE '%" . $keyword . "%' ";
+      $query .= "OR `steps` LIKE '%" . $keyword . "%'";
+
+      $result = mysqli_query($db_connection, $query);
+      if ($result && $result->num_rows > 0) {
+          $db_results = $result;
+      } else {
+          $db_results = null;
+      }
+}
+else {
+    $query = 'SELECT * ';
+    $query .= 'FROM Recipes';
+    
+    $db_results = mysqli_query($db_connection, $query);
+}
 ?> 
 
           <div class="search_center">
@@ -14,18 +45,16 @@
 
           <!--<h3 class="searchtext">Show me</h3>-->
   
-          <h2 class="section_title">RESULTS</h2>
+          <h2 class="section_title">SEARCH</h2>
           <div class="center">
-            <div class="grid">
-                <a href="recipes.html">
-            <img src="images/icecream.png" alt="Strawberry Ice Cream" class="imgsize"></a>
-                <a href="recipes.html">
-            <img src="images/crispy_dumpling.png" alt="Crispy Dumplings in Chili Oil" class="imgsize"></a>
-                <a href="recipes.html">
-            <img src="images/crispy_dumpling.png" alt="Crispy Dumplings in Chili Oil" class="imgsize"></a>
-                <a href="recipes.html">
-            <img src="images/crispy_dumpling.png" alt="Crispy Dumplings in Chili Oil" class="imgsize"></a>
-                <a href="recipes.html">
+            <div class="container">
+            <?php
+        if ($db_results) {
+            include __DIR__ . '/components/list-recipes.php';
+        } else {
+            echo '<p>There are no recipes in the database yet!</p>';
+        }
+        ?>
         </div>
 </body>
 </html>
