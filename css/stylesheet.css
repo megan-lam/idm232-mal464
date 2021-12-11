@@ -110,12 +110,7 @@ body{
     background-size:cover;
     height: 4rem;
     }
-    div.edit{
-    background-image: url("../images/small_gray.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 6rem;
-    }
+
 
     .header_text, .title_container{
         font-size: 2.5rem;
@@ -174,10 +169,8 @@ body{
     height: 4rem;
     }
     div.edit{
-    background-image: url("../images/small_gray.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 4rem;
+    background-color: rgb(184, 184, 184);
+    height: 10rem;
     }
 
     .header_text, .header_text1, .title_container{
@@ -231,10 +224,8 @@ body{
     height: 5rem;
     }
     div.edit{
-    background-image: url("../images/small_gray.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 5rem;
+    background-color: rgb(184, 184, 184);
+    height: 11rem;
     }
 
     .header_text, .header_text1, .title_container{
@@ -290,10 +281,8 @@ body{
     height: 4rem;
     }
     div.edit{
-    background-image: url("../images/large_gray.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 4rem;
+    background-color: rgb(184, 184, 184);
+    height: 11rem;
     }
 
     .header_text, .header_text1, .title_container{
@@ -677,4 +666,16 @@ body.search{
 div.center_btn{
 text-align: center;
 padding-bottom: 3rem;
+}
+.table_title{
+    font-family: 'robotocondensed';
+    color: #FB6854;
+    font-size: 1.7rem;
+}
+td{
+    padding: .3rem 2rem;
+    font-family: 'robotocondensed';
+}
+table{
+    padding-bottom: 6rem;
 }

@@ -1,9 +1,8 @@
 <table>
     <thead>
       <tr>
-        <th>Recipe</th>
-        <th>Created</th>
-        <th>Date</th>
+        <th class="table_title">Recipe</th>
+        <th class="table_title">Date</th>
       </tr>
     </thead>
     <tbody>
@@ -11,7 +10,6 @@
           while ($row = mysqli_fetch_assoc($db_results)) {
               echo '<tr>';
               echo '<td><a href="view.php?id=' . $row['id'] . '">' . $row['recipe_title'] . '</a></td>';
-              echo '<td>' . $row['id'] . '</td>';
               echo '<td>' . $row['date_posted'] . '</td>';
               echo '</td>';
           }
